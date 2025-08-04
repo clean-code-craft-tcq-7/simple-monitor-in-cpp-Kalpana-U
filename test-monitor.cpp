@@ -20,4 +20,4 @@ TEST(Monitor, PulseRateCritical) {
 TEST(Monitor, Spo2Critical) {
   ASSERT_FALSE(isSpo2Ok(89));
   ASSERT_TRUE(isSpo2Ok(95));
-}
+} 
