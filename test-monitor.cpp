@@ -16,8 +16,13 @@ TEST(Monitor, PulseRateCritical) {
   ASSERT_FALSE(isPulseRateOk(59));
   ASSERT_FALSE(isPulseRateOk(101));
   ASSERT_TRUE(isPulseRateOk(75));
+  ASSERT_TRUE(isPulseRateOk(61));
 }
 TEST(Monitor, Spo2Critical) {
   ASSERT_FALSE(isSpo2Ok(89));
   ASSERT_TRUE(isSpo2Ok(95));
+}
+
+TEST(Monitor, VitalsTemperatureCritical) {
+  ASSERT_FALSE(vitalsOk(98.5, 102, 100.7));
 }
